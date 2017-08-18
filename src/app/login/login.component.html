@@ -1,0 +1,48 @@
+<div style="padding: 0em 0em 0em 10em;margin-right: 10em;">
+    <md-card>
+        <md-tab-group>
+                <md-tab>
+                    <template md-tab-label>
+                        <span class="material-icons" style="font-size: 20px;">lock</span>
+                        Login
+                    </template>
+                    <div class="input">
+                        <md-input-container>
+                            <label></label>
+                            <input mdInput placeholder="Email" [(ngModel)]="user.email" name="email" type="email" required>
+                            
+                        </md-input-container>
+                    </div>
+                    <div class="input">
+                        <md-input-container>
+                            <label></label>
+                            <input mdInput placeholder="Password" [(ngModel)]="user.password" name="password" type="password" required>
+                        </md-input-container>   
+                    </div>
+                    <span *ngIf="errorMessage" class="error">{{ errorMessage }}</span>
+                    <div>
+                        <button md-raised-button color="primary" (click)="login();">
+                            Login
+                        </button>
+                    </div>
+                    <!--<div>
+                        <button md-icon-button  color="white" class="icon-button">
+                            <svg-icon src="assets/icons/facebook_icon.svg" class="svg-icon"></svg-icon>
+                        </button>
+                        <button md-icon-button  color="white" class="icon-button">
+                            <svg-icon src="assets/icons/twitter_icon.svg" class="svg-icon"></svg-icon>
+                        </button>
+                    </div>-->
+                </md-tab>
+            
+                <md-tab>
+                    <template md-tab-label>
+                        <span class="material-icons" style="font-size: 20px;margin-top: 5px;">person add</span>
+                        Sign up
+                    </template>
+                    <app-register></app-register>
+                </md-tab>
+            
+        </md-tab-group>
+    </md-card>
+</div>

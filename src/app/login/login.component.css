@@ -1,0 +1,36 @@
+.input {
+  margin-left: 50px;
+}
+
+.hint{
+  color : gray;
+}
+
+.error{
+  margin-left: 50px;
+  color: red; 
+}
+
+.icon-button{
+  width: 60px !important;
+  height: 60px !important;
+}
+
+.svg-icon{
+  margin-left: -3px !important;
+  margin-top: -5px !important;
+  width: 50px !important;
+  height: 50px !important;
+}
+
+/deep/ .mat-input-container{
+  width: 70% !important;
+}
+
+/deep/ .mat-tab-label{
+  min-width: 210px !important; 
+}
+
+/deep/ .mat-raised-button{
+  margin-left : 330px !important;
+}

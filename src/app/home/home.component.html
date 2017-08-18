@@ -1,0 +1,154 @@
+<md-toolbar color="primary">
+  <span>Space Viewer</span>
+  <span class="spacer"></span>
+  <button md-icon-button [mdMenuTriggerFor]="menu">
+    <md-icon>more_vert</md-icon>
+  </button>
+  <md-menu #menu="mdMenu">
+    <button md-menu-item>
+      <md-icon>person</md-icon>
+      <span>Login</span>
+    </button>
+    <button md-menu-item>
+      <md-icon>announcement</md-icon>
+      <span>Issues</span>
+    </button>
+    <button md-menu-item>
+      <md-icon>notifications_off</md-icon>
+      <span>Disable alerts</span>
+    </button>
+    <button md-menu-item (click)="logout();">
+      <md-icon>exit_to_app</md-icon>
+      <span>Log out</span>
+    </button>
+  </md-menu>
+</md-toolbar>
+
+<md-tab-group class="md-tab-group">
+
+  <md-tab >
+    <template md-tab-label>
+      <span class="material-icons" style="font-size: 15px;">event</span>
+      New Feeds
+    </template>
+    <md-card *ngFor="let spaceScreen of spaceScreens; let i = index">
+      <img md-card-image src="{{ spaceScreen.img }}">
+      <md-card-content>
+        <p>{{ spaceScreen.description }}</p>
+      </md-card-content>
+      <md-card-actions>
+        <button md-button (click)="likeMe(i);">
+          <i class="material-icons md-18" [class.blue-color]="spaceScreen.liked == '1'">thumb_up</i>LIKE
+        </button>
+        <button md-button (click)="deleteMe(i);">
+          <i class="material-icons md-18">delete</i>DELETE
+        </button>
+      </md-card-actions>
+    </md-card>
+  </md-tab>
+
+   <md-tab>
+    <template md-tab-label>
+      <span class="material-icons" style="font-size:15px;width: 15px;">photo library</span>
+      Photos
+    </template>
+  </md-tab>
+
+  <md-tab>
+    <template md-tab-label>
+      <span class="material-icons" style="font-size:15px;width: 15px;">chat</span>
+      Messages
+    </template>
+       <md-input-container style="margin-left:10px;">
+          <input mdInput>
+          <span mdPrefix class="material-icons" style="font-size: 20px;">search</span>
+       </md-input-container>
+    <div style="height: 400px;">
+      <div class="wrapper-left">
+        <button md-raised-button>
+          <table border=1 rules=none>
+            <tr>
+              <td rowspan="2">
+                <img md-card-avatar src="assets/images/space3.jpeg">
+              </td>
+              <td class="td-name">
+                Darren
+              </td>
+              <td class="td-time">24-06-2017</td>
+            </tr>
+            <tr>
+              <td class="td-name" colspan="2">
+                Hello!
+              </td>
+            </tr>
+          </table>
+        </button>
+        <button md-raised-button>
+          <table border=1 rules=none>
+            <tr>
+              <td rowspan="2">
+                <img md-card-avatar src="assets/images/space4.jpeg">
+              </td>
+              <td class="td-name">
+                Lary
+              </td>
+              <td class="td-time">24-06-2017</td>
+            </tr>
+            <tr>
+              <td class="td-name" colspan="2">
+                How are you?
+              </td>
+            </tr>
+          </table>
+        </button>
+        <button md-raised-button>
+          <table border=1 rules=none>
+          <tr>
+            <td rowspan="2">
+              <img md-card-avatar src="assets/images/space5.jpeg">
+            </td>
+            <td class="td-name">
+              Lary
+            </td>
+            <td class="td-time">24-06-2017</td>
+          </tr>
+          <tr>
+            <td class="td-name" colspan="2">
+              Are you free?
+            </td>
+          </tr>
+        </table>
+        </button>
+         
+      </div>
+      <div class="wrapper-right">
+        <md-card style="height: 498px;background: #f1f7f9;">
+          
+        </md-card>
+      </div>
+    </div>
+  </md-tab>
+
+  <md-tab>
+    <template md-tab-label>
+      <span class="material-icons" style="font-size:15px;width: 15px;">people</span>
+      Friends
+    </template>
+  </md-tab>
+
+  <md-tab >
+    <template md-tab-label>
+      <span class="material-icons" style="font-size: 15px;">settings</span>
+      Settings
+    </template>
+    <div id="page-padding">
+      <h1>Setting</h1>
+      <p>Here you can control the various settings associated with your app.
+          There's no need to hit a save button, as the values are updated automatically.</p>
+      <label>Number of Thumbnails</label>
+      <md-slider class="md-slider" showTicks="true" max="100" min="0" step="1" thumbLabel="true" value="18">
+      </md-slider>
+      <md-slide-toggle>Some setting</md-slide-toggle>
+    </div>
+  </md-tab>
+</md-tab-group>
