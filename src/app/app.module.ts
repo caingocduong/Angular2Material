@@ -1,4 +1,5 @@
 import { HomeComponent } from './home/home.component';
+import { EqualPasswordValidator } from './custom-validators/comfirm-password.validator';
 import { AuthenticationService } from './services/authentication.service';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -19,7 +20,8 @@ import { Register } from './register/register.component';
     AppComponent,
     LoginComponent,
     HomeComponent,
-    Register
+    Register,
+    EqualPasswordValidator
   ],
   imports: [
     BrowserModule,

@@ -1,43 +1,70 @@
-<div class="input">
-    <md-input-container>
-        <label></label>
-        <input mdInput required>
-        <md-placeholder>
-            <md-icon>email</md-icon>
-            Email
-        </md-placeholder>
-        <md-hint class="hint">
-            <i>darren266@gmail.com</i>
-        </md-hint>
-    </md-input-container>
-    <md-input-container>
-        <label></label>
-        <input mdInput placeholder="Username">
-        <md-hint class="hint">darren266</md-hint>
-    </md-input-container>
-    <md-input-container>
-        <label></label>
-        <input mdInput>
-        <md-placeholder>
-            <md-icon>phone</md-icon>
-            Phone number
-        </md-placeholder>
-        <md-hint class="hint"><i>(+84) 168 999 7644</i></md-hint>
-    </md-input-container>
-    <md-input-container>
-        <label></label>
-        <input mdInput placeholder="Password" required>
-        <md-hint class="hint">
-            <i>Password have to at least 6-15 characters</i>
-        </md-hint>
-    </md-input-container>
-    <md-input-container>
-        <label></label>
-        <input mdInput placeholder="Confirm password" required>
-    </md-input-container>
-</div>
-<div class="submit-button">
-    <button md-raised-button color="primary">
-        Submit
-    </button>
-</div>
+<form (ngSubmit)="onSubmit(userInfo)" [formGroup]="userInfo" novalidate>
+    <div class="input">
+        <md-input-container>
+            <label></label>
+            <input mdInput formControlName="email" required >
+            <md-placeholder>
+                <md-icon>email</md-icon>
+                Email
+            </md-placeholder>
+            <md-hint *ngIf="userInfo.get('email').touched 
+                            && userInfo.get('email').hasError('required')
+                            && userInfo.get('email').errors.invalidEmail"
+                     class="hint"
+                     align="end">
+                <i>*Email is required with format (email@gmail.com)</i>
+            </md-hint>
+        </md-input-container>
+        
+
+        <md-input-container>
+            <label></label>
+            <input mdInput placeholder="Username" required 
+                    minlength="5" formControlName="username">
+            <md-hint *ngIf="userInfo.get('username').touched 
+                            && userInfo.get('username').hasError('required')"
+                     class="hint"
+                     align="end">
+                <i>*Username is required (minimum 5 characters)</i>
+            </md-hint>
+        </md-input-container>
+        <md-input-container>
+            <label></label>
+            <input mdInput>
+            <md-placeholder>
+                <md-icon>phone</md-icon>
+                Phone number
+            </md-placeholder>
+        </md-input-container>
+        <md-input-container>
+            <label></label>
+            <input mdInput placeholder="Password" required minlength="6" type="password" 
+                    formControlName="password" validateEqual="confirmPassword" reverse="true">
+            <md-hint *ngIf="userInfo.get('password').touched 
+                            && userInfo.get('password').hasError('required')"
+                      class="hint"
+                      align="end">
+              <i>*Password is required (minimum 6 characters)</i>
+            </md-hint>
+        </md-input-container>
+        
+
+        <md-input-container>
+            <label></label>
+            <input mdInput placeholder="Confirm password" required 
+                    type="password" formControlName="confirmPassword" validateEqual="password">
+            <md-hint *ngIf="userInfo.get('confirmPassword').touched 
+                            && userInfo.get('confirmPassword').hasError('required')"
+                      class="hint"
+                      align="end">
+              <i>*Password mismatch</i>
+            </md-hint>
+        </md-input-container>
+        
+    </div>
+    <div class="submit-button">
+        <button md-raised-button color="primary" type="submit" [disabled]="userInfo.invalid" >
+            Submit
+        </button>
+    </div>
+</form>

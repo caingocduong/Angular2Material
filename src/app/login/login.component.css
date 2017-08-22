@@ -3,12 +3,7 @@
 }
 
 .hint{
-  color : gray;
-}
-
-.error{
-  margin-left: 50px;
-  color: red; 
+  color : red;
 }
 
 .icon-button{
@@ -24,7 +19,7 @@
 }
 
 /deep/ .mat-input-container{
-  width: 70% !important;
+  width: 90% !important;
 }
 
 /deep/ .mat-tab-label{
@@ -33,4 +28,9 @@
 
 /deep/ .mat-raised-button{
   margin-left : 330px !important;
+}
+
+.md-chip{
+  width: 240px !important;
+  margin-left: 50px !important;
 }

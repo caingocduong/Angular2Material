@@ -19,7 +19,15 @@
                             <input mdInput placeholder="Password" [(ngModel)]="user.password" name="password" type="password" required>
                         </md-input-container>   
                     </div>
-                    <span *ngIf="errorMessage" class="error">{{ errorMessage }}</span>
+                    <md-chip-list class="mat-chip-list-stacked">
+                        <md-chip *ngIf="hasError" class="md-chip" color="warn" selected="true">{{ errorMessage }}</md-chip>
+                    </md-chip-list>
+                    <div style="margin-left: 30%;padding-top: 10px;">
+                        <md-checkbox >Remember me</md-checkbox>
+                    </div>
+                    <div style="margin-left: 30%;padding-top: 10px;">
+                        <a href="#" >Forgot password?</a>
+                    </div>
                     <div>
                         <button md-raised-button color="primary" (click)="login();">
                             Login

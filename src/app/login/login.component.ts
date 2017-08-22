@@ -12,6 +12,7 @@ import { User } from '../models/User';
 export class LoginComponent {
     public user = new User('','');
     public errorMessage = '';
+    public hasError = false;
 
     constructor(
         private authenticationService : AuthenticationService
@@ -20,6 +21,10 @@ export class LoginComponent {
     login(){
         if(!this.authenticationService.login(this.user)){
             this.errorMessage = 'Email or password is not correct!';
+            this.hasError = true;
+            setTimeout(() => {
+                this.hasError = false;
+            }, 3000);
         }
     }
 
