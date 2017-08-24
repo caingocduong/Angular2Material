@@ -1,0 +1,32 @@
+{
+    "feature_product_list" : [
+        {
+            "img" : "../assets/images/feature-pic1.png",
+            "title" : "Lorem Ipsum is simply",
+            "content" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+            "originalPrice" : "528.22",
+            "price" : "505.22"
+        },
+        {
+            "img" : "../assets/images/feature-pic2.jpg",
+            "title" : "Lorem Ipsum is simply",
+            "content" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+            "originalPrice" : "640.89",
+            "price" : "620.87"
+        },
+        {
+            "img" : "../assets/images/feature-pic3.jpg",
+            "title" : "Lorem Ipsum is simply",
+            "content" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+            "originalPrice" : "240.66",
+            "price" : "220.97"
+        },
+        {
+            "img" : "../assets/images/feature-pic4.png",
+            "title" : "Lorem Ipsum is simply",
+            "content" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+            "originalPrice" : "240.66",
+            "price" : "220.97"
+        }
+    ]
+}

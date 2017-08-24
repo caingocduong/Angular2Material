@@ -1,3 +1,4 @@
+import { WelcomeComponent } from './welcome/welcome.component';
 import { HomeComponent } from './home/home.component';
 import { EqualPasswordValidator } from './custom-validators/comfirm-password.validator';
 import { AuthenticationService } from './services/authentication.service';
@@ -20,6 +21,7 @@ import { Register } from './register/register.component';
     AppComponent,
     LoginComponent,
     HomeComponent,
+    WelcomeComponent,
     Register,
     EqualPasswordValidator
   ],

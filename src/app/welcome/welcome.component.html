@@ -1,0 +1,280 @@
+<md-card style="position: absolute;right: 255px;width: 887px;left: 150px;">
+    <!--Header-->
+    <a routerLink="/welcome" class="logo">
+        <img src="assets/images/logo.png" alt="">
+    </a>
+    <div class="header-right">
+        <md-input-container>
+            <input mdInput placeholder="Search for Products">
+        </md-input-container>
+        <button md-raised-button color="primary">Search</button>
+        <button md-raised-button>
+            <img src="assets/images/header_cart.png" alt="">
+        </button>
+        <md-select>
+            <md-option></md-option>
+            <md-option></md-option>
+            <md-option></md-option>
+        </md-select>
+        <md-select [(ngModel)]="selectOption">
+            <md-option value="EN" class="option-lang">
+                <span>  
+                    <img src="assets/images/gb.png" alt="" style="padding-top:7px;">
+                </span>
+                <a href="#" style="text-decoration : none;">
+                    <span class="span-lang">ENG</span>
+                </a>
+            </md-option>
+            <md-option value="VN" class="option-lang">
+                <span>  
+                    <img src="assets/images/gb.png" alt="" style="padding-top:7px;">
+                </span>
+                <a href="#" style="text-decoration : none;">
+                    <span class="span-lang">VN</span>
+                </a>
+            </md-option>
+        </md-select>
+        <button md-raised-button md-tooltip="Login">
+            <img src="assets/images/login.png" alt="">
+        </button>
+    </div>
+    <!--End Header-->
+
+    <!--Menu-->
+    <div class="menu">
+            
+        <button md-button class="menu-button">Home</button>
+            
+        <button md-button [mdMenuTriggerFor]="productMenu" class="menu-button">
+            Products
+            <img src="assets/images/down-arrow.png" alt="">
+        </button>
+        <md-menu #productMenu  yPosition="below">
+            <button md-menu-item [mdMenuTriggerFor]="subProductMenu1" >
+                <img src="assets/images/drop_arrow-hover.png" alt="">
+                Product1
+            </button>
+            <md-menu #subProductMenu1="mdMenu">
+                <button md-menu-item>
+                    <img src="assets/images/drop_arrow-hover.png" alt="">
+                    SubProduct1
+                </button>
+                <button md-menu-item>
+                    <img src="assets/images/drop_arrow-hover.png" alt="">
+                    SubProduct2
+                </button>
+            </md-menu>
+            <button md-menu-item>
+                <img src="assets/images/drop_arrow-hover.png" alt="">
+                Product2
+            </button>
+        </md-menu>
+
+        <button md-button [mdMenuTriggerFor]="brandMenu" class="menu-button">
+            Top brands
+            <img src="assets/images/down-arrow.png" alt="">    
+        </button>
+        <md-menu #brandMenu="mdMenu">
+            <button md-menu-item>
+                <img src="assets/images/drop_arrow-hover.png" alt="">
+                Brand1</button>
+            <button md-menu-item>
+                <img src="assets/images/drop_arrow-hover.png" alt="">
+                Brand2
+            </button>
+        </md-menu>
+
+        <button md-button [mdMenuTriggerFor]="serviceMenu" class="menu-button">
+            Services
+            <img src="assets/images/down-arrow.png" alt="">
+        </button>
+        <md-menu #serviceMenu="mdMenu">
+            <button md-menu-item>
+                <img src="assets/images/drop_arrow-hover.png" alt="">
+                Service1
+            </button>
+            <button md-menu-item>
+                <img src="assets/images/drop_arrow-hover.png" alt="">
+                Service2
+            </button>
+        </md-menu>
+
+        <button md-button class="menu-button">FAQS</button>
+
+        <button md-button class="menu-button">About</button>
+            
+        <button md-button class="menu-button">Contact</button>
+    </div>
+    <!--End Menu-->
+
+    <!--Top Products Section-->
+    <div class="top-product">
+        <md-card class="left-above">
+            <md-card-content>
+                <img src="assets/images/pic4.png" alt="" class="product-image">
+                <h2>IPHONE</h2>
+                <p>
+                    Lorem ipsum dolor sit amet sed do eiusmod.
+                </p>
+                <button md-button class="add-button">
+                    Add to cart
+                </button>
+            </md-card-content>
+        </md-card>
+
+        <md-card class="right-above">
+            <md-card-content>
+                <img src="assets/images/pic3.png" alt="" class="product-image" style="width: 100px;
+height: 150px;">
+                <h2 style="margin-left: 120px;margin-top: -180px;">SAMSUN</h2>
+                <p style="margin-left: 120px;">
+                    Lorem ipsum dolor sit amet sed do eiusmod.
+                </p>
+                <button md-button class="add-button" style="margin-left: 100px;">
+                    Add to cart
+                </button>
+            </md-card-content>
+        </md-card>
+
+        <md-card class="left-below">
+            <md-card-content>
+                <img src="assets/images/pic3.jpg" alt="" class="product-image" style="width: 105px;">
+                <h2 style="margin-left: 110px;margin-top: -130px;">ACER</h2>
+                <p style="margin-left: 110px;">
+                    Lorem ipsum dolor sit amet sed do eiusmod.
+                </p>
+                <button md-button class="add-button" style="margin-left: 110px;">
+                    Add to cart
+                </button>
+            </md-card-content>
+        </md-card>
+
+        <md-card class="right-below">
+            <md-card-content>
+                <img src="assets/images/pic1.png" alt="" class="product-image" style="width: 105px;">
+                <h2 style="margin-left: 120px;margin-top: -130px;">CANON</h2>
+                <p style="margin-left: 120px;">
+                    Lorem ipsum dolor sit amet sed do eiusmod.
+                </p>
+                <button md-button class="add-button" style="margin-left: 110px;">
+                    Add to cart
+                </button>
+            </md-card-content>
+        </md-card>
+    </div>
+    <!--End Top Products Section-->
+    
+    <!--Thumbnail Image Section-->
+    <div class="thumbnail-image">
+        <md-card>
+            <md-card-content >
+               <img src="assets/images/4.jpg" alt="" style="width:100%; height:270px;">
+            </md-card-content>
+        </md-card>
+    </div>
+
+    <div class="flex-control-pagging">
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+    </div>
+    <!--End Thumbnail Image Section-->
+
+    <!--Header Feature Products-->
+    <md-card class="feature-product">
+        <md-card-content>
+            <h3 class="product-h3-header">Feature products</h3>
+            <md-select placeholder="Sort by" class="product-filter">
+                <md-option *ngFor="let sort of sortBy" [value]="sort.value">
+                    {{ sort.viewValue }}
+                </md-option>
+            </md-select>
+            <md-paginator [length]="200"
+                        [pageSize]="10"
+                        [pageSizeOptions]="[4,8,16,20]"
+                        class="product-paginator">
+                        
+            </md-paginator>
+        </md-card-content>
+    </md-card>
+    <!--End Header Feature Products-->
+
+    <!--Show Feature Products-->
+    <md-card class="product" *ngFor="let product of feature_products">
+        <md-card-content>
+            <a>
+                <img [src]="product.img" alt="" style="width:190px;margin-left:-15px;"> 
+            </a>
+            <h2>
+                {{ product.title }}
+            </h2>
+            <p>
+                {{ product.content }}
+            </p>
+            <span class="strike">${{ product.originalPrice }}</span>
+            <span class="price">${{ product.price }}</span>
+        </md-card-content>
+        <md-card-actions>
+            <button md-button class="add-cart-button">
+                <img src="assets/images/cart.jpg" alt="" style="width:55px;margin-left:-16px;">
+                Add to cart
+            </button>
+            <button md-button class="detail-button">
+                Detail
+            </button>
+        </md-card-actions>
+    </md-card>
+    <!--End Show Feature Products-->
+
+    <!--Header New Products-->
+    <md-card class="new-product">
+        <md-card-content>
+            <h3 class="product-h3-header">New products</h3>
+            <md-select placeholder="Sort by" class="product-filter">
+                <md-option *ngFor="let sort of sortBy" [value]="sort.value">
+                    {{ sort.viewValue }}
+                </md-option>
+            </md-select>
+            <md-paginator [length]="200"
+                        [pageSize]="10"
+                        [pageSizeOptions]="[4,8,16,20]"
+                        class="product-paginator">
+                        
+            </md-paginator>
+        </md-card-content>
+    </md-card>
+    <!--End Header New Products-->
+
+    <!--Show New Products-->
+    <md-card class="product" *ngFor="let product of new_products">
+        <md-card-content>
+            <a>
+                <img [src]="product.img" alt="" style="width:190px;margin-left:-15px;"> 
+            </a>
+            <span>
+                <img src="assets/images/discount-img.png" alt="">
+            </span>
+            <h2>
+                {{ product.title }}
+            </h2>
+            <span class="strike">${{ product.originalPrice }}</span>
+            <span class="price">${{ product.price }}</span>
+        </md-card-content>
+        <md-card-actions>
+            <button md-button class="add-cart-button">
+                <img src="assets/images/cart.jpg" alt="" style="width:55px;margin-left:-16px;">
+                Add to cart
+            </button>
+            <button md-button class="detail-button">
+                Detail
+            </button>
+        </md-card-actions>
+    </md-card>
+    <!--End Show New Products-->
+
+</md-card>
+
+
