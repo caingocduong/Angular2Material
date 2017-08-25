@@ -1,0 +1,305 @@
+$background-value : #602D8D
+$font-type : 'Monda', sans-serif
+
+.md-card
+  width: 205px
+  height: 153px
+  padding: 15px 40px 20px 10px
+
+.social-link
+  width: 40px
+  margin-left: -15px
+  margin-top: -29px
+  height: 30px
+
+.social-icon
+  flex: 1
+  margin-left: -20px
+
+
+a
+  text-decoration: none
+
+.logo
+  float: left
+  width: 33%
+
+.header-right
+  float: left
+  width: 67%
+  margin-top: 35px
+
+.span-lang
+  font-weight: bold
+  color: #FFF
+  font-size: 13px
+
+.option-lang
+  background: blueviolet !important
+
+.menu
+  padding-top: 120px
+  padding-left: 5px
+
+.menu-button
+  background: #3f3939
+  color: white
+
+.top-product
+  float: left
+  width: 60%
+  margin: 10px 0px 0px 5px
+
+  .left-above
+    @extend .md-card
+
+  .left-below
+    @extend .md-card
+    margin-top: 5px
+
+  .right-above
+    @extend .md-card
+    float: left
+    margin-top: -189px
+    margin-left: 260px
+
+  .right-below
+    @extend .md-card
+    float: left
+    margin-left: 260px
+    margin-top: -189px
+
+  .product-image
+    padding-bottom: 20px
+    max-width: 100%
+
+  h2
+    margin-top: -170px
+    margin-left: 100px
+    color: #CC3636
+    font-size: 1.2em
+    font-family: $font-type
+    font-weight: normal
+
+  p
+    margin-left: 100px
+
+  .add-button
+    margin-left: 90px
+    background: $background-value
+    color: white
+    border-radius: 8px !important
+
+.thumbnail-image
+  float: left
+  width: 40%
+  margin-left: 60%
+  margin-top: -383px
+
+.flex-control-pagging
+  margin-top: 360px
+  margin-left: 815px
+
+  a
+    text-decoration: none
+    text-indent: -9999px
+    display: inline-block
+    background: $background-value
+    height: 8px
+    width: 8px
+    border-radius: 20px
+
+.new-product
+  margin-top: 470px
+  margin-left: 5px
+  height: 30px
+
+.feature-product
+  margin-top: 30px
+  margin-left: 5px
+  height: 30px
+
+.product-h3-header
+  float: left
+  font-family: $font-type
+  font-size: 20px
+  color: $background-value
+  text-transform: uppercase
+  padding-top: 15px
+
+.product-filter
+  float: left
+  margin-left: 58px
+  margin-top: 10px
+
+.product-paginator
+  margin-left: 390px
+  margin-top: -10px
+  width: 400px
+
+.product
+  margin: 5px 0px 0px 5px
+  float: left
+  width: 19%
+
+  h2
+    color: #CC3636
+    font-family: $font-type
+    font-size: 1em
+    font-weight: normal
+
+  p
+    font-size: 0.85em
+    padding: 0.4em 0
+    color: #333
+
+.strike
+  font-size: 18px
+  font-family: $font-type
+  color: #444
+  text-decoration: line-through
+
+.price
+  font-size: 18px
+  font-family: $font-type
+  color: #CC3636
+  margin-left: 18px
+
+.product
+  .add-cart-button
+    background: $background-value
+    margin-left: 28px
+    color: white
+
+  .detail-button
+    background: $background-value
+    margin-left: 39px
+    color: white
+    margin-top: 5px
+
+.discount-img
+  position: absolute
+  top: 30px
+  height: 42px
+
+.percentage
+  color: white
+  font-weight: bold
+  position: absolute
+  top: 43px
+  left: 33px
+
+.footer
+  background: #3f3939
+  top: 1660px
+  width: 90.7%
+  left: 29px
+  padding-bottom: 1px
+
+  .wrapper
+    margin: 0 auto
+    padding: 0 1%
+    display: flex
+
+  .group-section
+    background: #504b4b
+    flex: 1
+    margin-left: 5px
+
+.group-section
+  h2
+    color: #ccc
+    margin-bottom: .5em
+    font-size: 1.0em
+    line-height: 1.2
+    font-family: 'Doppio One', sans-serif
+    font-weight: normal
+    margin-top: 0px
+    letter-spacing: -1px
+    text-transform: uppercase
+    border-bottom: 1px solid #ccc
+    padding-bottom: 0.5em
+
+  a
+    font-size: 0.8125em
+    padding: 0.4em 0
+    color: #979797
+    font-family: Arial, Helvetica, sans-serif
+    display: block
+
+    &:hover
+      font-size: 0.9em
+      color: #f3eaea
+
+.social-group
+  display: flex
+  width: 100px
+  margin-left: 30px
+
+.facebook-icon
+  background: url(/assets/images/icon-2.png) no-repeat 0px -29px
+  @extend .social-icon
+
+  a
+    @extend .social-link
+
+    &:hover
+      background: url(/assets/images/icon-2.png) no-repeat 0px 12px
+      height: 30px
+
+.twitter-icon
+  background: url(/assets/images/icon-3.png) no-repeat 0px -29px
+  @extend .social-icon
+
+  a
+    @extend .social-link
+
+    &:hover
+      background: url(/assets/images/icon-3.png) no-repeat 0px 12px
+      height: 30px
+
+.contact-icon
+  background: url(/assets/images/icon-1.png) no-repeat 0px -29px
+  @extend .social-icon
+
+  a
+    @extend .social-link
+
+    &:hover
+      background: url(/assets/images/icon-1.png) no-repeat 0px 12px
+      height: 30px
+
+.google-plus-icon
+  background: url(/assets/images/icon-4.png) no-repeat 0px -29px
+  @extend .social-icon
+
+  a
+    @extend .social-link
+
+    &:hover
+      background: url(/assets/images/icon-4.png) no-repeat 0px 12px
+      height: 30px
+
+.coppy-right
+  font-size: 0.8125em
+  color: #979797
+  font-family: Arial, Helvetica, sans-serif
+
+  p
+    margin-left: 350px
+
+/deep/
+  .mat-raised-button
+    padding: 0px 0px !important
+    min-width: 46px !important
+
+  .mat-menu-item
+    line-height: 40px !important
+    height: 40px !important
+
+  .mat-button
+    min-width: 122px !important
+    line-height: 46px !important
+
+  button.mat-menu-item
+    width: 200px !important

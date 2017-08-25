@@ -1,7 +1,12 @@
+a{
+    text-decoration: none;
+}
+
 .logo{
     float: left;
     width: 33%;
 }
+
 .header-right{
     float: left;
     width: 67%;
@@ -195,6 +200,155 @@
     margin-left: 39px;
     color: white;
     margin-top:5px;
+}
+
+.discount-img{
+    position: absolute;
+    top: 30px;
+    height: 42px;
+}
+
+.percentage{
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 43px;
+    left: 33px;
+}
+
+.footer{
+    background:#3f3939;
+    top: 1660px;
+    width: 90.7%;
+    left: 29px;
+    padding-bottom: 1px;
+}
+
+.footer .wrapper{
+    margin: 0 auto;
+    padding: 0 1%;
+    display: flex;
+}
+
+.footer .group-section{
+    background: #504b4b;
+    flex: 1;
+    margin-left:5px;
+}
+
+.group-section h2{
+    color: #ccc;
+    margin-bottom: .5em;
+    font-size: 1.0em;
+    line-height: 1.2;
+    font-family: 'Doppio One', sans-serif;
+    font-weight: normal;
+    margin-top: 0px;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.5em;
+}
+
+.group-section a{
+    font-size: 0.8125em;
+    padding: 0.4em 0;
+    color: #979797;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+}
+
+.group-section a:hover{
+    font-size: 0.9em;
+    color: #f3eaea;
+}
+
+.social-group{
+    display: flex;
+    width: 100px;
+    margin-left: 30px;
+}
+
+.facebook-icon{
+    background : url(/assets/images/icon-2.png) no-repeat 0px -29px;
+    flex: 1;
+    margin-left:-20px;
+}
+
+.facebook-icon a{
+    width: 40px;
+    margin-left: -15px;
+    margin-top: -29px;
+    height: 30px;
+}
+
+.facebook-icon a:hover {
+    background : url(/assets/images/icon-2.png) no-repeat 0px 12px;
+    height: 30px;
+}
+
+.twitter-icon{
+    background : url(/assets/images/icon-3.png) no-repeat 0px -29px;
+    flex: 1;
+    margin-left:-20px;
+}
+
+.twitter-icon a{
+    width: 40px;
+    margin-left: -15px;
+    margin-top: -29px;
+    height: 30px;
+}
+
+.twitter-icon a:hover {
+    background : url(/assets/images/icon-3.png) no-repeat 0px 12px;
+    height: 30px;
+}
+
+.contact-icon{
+    background : url(/assets/images/icon-1.png) no-repeat 0px -29px;
+    flex: 1;
+    margin-left:-20px;
+}
+
+.contact-icon a{
+    width: 40px;
+    margin-left: -15px;
+    margin-top: -29px;
+    height: 30px;
+}
+
+.contact-icon a:hover {
+    background : url(/assets/images/icon-1.png) no-repeat 0px 12px;
+    height: 30px;
+}
+
+.google-plus-icon{
+    background : url(/assets/images/icon-4.png) no-repeat 0px -29px;
+    flex: 1;
+    margin-left:-20px;
+}
+
+.google-plus-icon a{
+    width: 40px;
+    margin-left: -15px;
+    margin-top: -29px;
+    height: 30px;
+}
+
+.google-plus-icon a:hover {
+    background : url(/assets/images/icon-4.png) no-repeat 0px 12px;
+    height: 30px;
+}
+
+.coppy-right{
+    font-size: 0.8125em;
+    color: #979797;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.coppy-right p{
+    margin-left: 350px;
 }
 
 /deep/ .mat-raised-button{

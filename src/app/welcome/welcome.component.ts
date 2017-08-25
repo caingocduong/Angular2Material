@@ -5,7 +5,7 @@ import { Http } from '@angular/http';
 @Component({
     selector : 'app-welcome-page',
     templateUrl : './welcome.component.html',
-    styleUrls : [ './welcome.component.css' ]
+    styleUrls : [ './welcome.component.sass' ]
 })
 
 export class WelcomeComponent {
