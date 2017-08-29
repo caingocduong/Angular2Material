@@ -1,3 +1,6 @@
+import { RatingModule } from 'ngx-rating';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { FooterFragmentComponent } from './fragments/footer-fragment.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { HomeComponent } from './home/home.component';
 import { EqualPasswordValidator } from './custom-validators/comfirm-password.validator';
@@ -15,6 +18,8 @@ import 'hammerjs';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { Register } from './register/register.component';
+import { HeaderFragmentComponent } from './fragments/header-fragment.component';
+import { DetailProductComponent } from './detail-product/detail-product.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +28,10 @@ import { Register } from './register/register.component';
     HomeComponent,
     WelcomeComponent,
     Register,
-    EqualPasswordValidator
+    EqualPasswordValidator,
+    HeaderFragmentComponent,
+    FooterFragmentComponent,
+    DetailProductComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +41,9 @@ import { Register } from './register/register.component';
     HttpModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    AngularSvgIconModule
+    AngularSvgIconModule,
+    RatingModule,
+    NgxPaginationModule
   ],
   providers: [
     AuthenticationService

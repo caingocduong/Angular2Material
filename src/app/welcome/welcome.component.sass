@@ -6,44 +6,8 @@ $font-type : 'Monda', sans-serif
   height: 153px
   padding: 15px 40px 20px 10px
 
-.social-link
-  width: 40px
-  margin-left: -15px
-  margin-top: -29px
-  height: 30px
-
-.social-icon
-  flex: 1
-  margin-left: -20px
-
-
 a
   text-decoration: none
-
-.logo
-  float: left
-  width: 33%
-
-.header-right
-  float: left
-  width: 67%
-  margin-top: 35px
-
-.span-lang
-  font-weight: bold
-  color: #FFF
-  font-size: 13px
-
-.option-lang
-  background: blueviolet !important
-
-.menu
-  padding-top: 120px
-  padding-left: 5px
-
-.menu-button
-  background: #3f3939
-  color: white
 
 .top-product
   float: left
@@ -112,12 +76,14 @@ a
 .new-product
   margin-top: 470px
   margin-left: 5px
-  height: 30px
+  height: 40px
+  padding-top: 0px
 
 .feature-product
-  margin-top: 30px
+  margin-top: 10px
   margin-left: 5px
-  height: 30px
+  height: 40px
+  padding-top: 0px
 
 .product-h3-header
   float: left
@@ -125,12 +91,13 @@ a
   font-size: 20px
   color: $background-value
   text-transform: uppercase
-  padding-top: 15px
+  padding-top: 18px
 
 .product-filter
   float: left
   margin-left: 58px
   margin-top: 10px
+  padding-top: 6px
 
 .product-paginator
   margin-left: 390px
@@ -189,104 +156,8 @@ a
   top: 43px
   left: 33px
 
-.footer
-  background: #3f3939
-  top: 1660px
-  width: 90.7%
-  left: 29px
-  padding-bottom: 1px
-
-  .wrapper
-    margin: 0 auto
-    padding: 0 1%
-    display: flex
-
-  .group-section
-    background: #504b4b
-    flex: 1
-    margin-left: 5px
-
-.group-section
-  h2
-    color: #ccc
-    margin-bottom: .5em
-    font-size: 1.0em
-    line-height: 1.2
-    font-family: 'Doppio One', sans-serif
-    font-weight: normal
-    margin-top: 0px
-    letter-spacing: -1px
-    text-transform: uppercase
-    border-bottom: 1px solid #ccc
-    padding-bottom: 0.5em
-
-  a
-    font-size: 0.8125em
-    padding: 0.4em 0
-    color: #979797
-    font-family: Arial, Helvetica, sans-serif
-    display: block
-
-    &:hover
-      font-size: 0.9em
-      color: #f3eaea
-
-.social-group
-  display: flex
-  width: 100px
-  margin-left: 30px
-
-.facebook-icon
-  background: url(/assets/images/icon-2.png) no-repeat 0px -29px
-  @extend .social-icon
-
-  a
-    @extend .social-link
-
-    &:hover
-      background: url(/assets/images/icon-2.png) no-repeat 0px 12px
-      height: 30px
-
-.twitter-icon
-  background: url(/assets/images/icon-3.png) no-repeat 0px -29px
-  @extend .social-icon
-
-  a
-    @extend .social-link
-
-    &:hover
-      background: url(/assets/images/icon-3.png) no-repeat 0px 12px
-      height: 30px
-
-.contact-icon
-  background: url(/assets/images/icon-1.png) no-repeat 0px -29px
-  @extend .social-icon
-
-  a
-    @extend .social-link
-
-    &:hover
-      background: url(/assets/images/icon-1.png) no-repeat 0px 12px
-      height: 30px
-
-.google-plus-icon
-  background: url(/assets/images/icon-4.png) no-repeat 0px -29px
-  @extend .social-icon
-
-  a
-    @extend .social-link
-
-    &:hover
-      background: url(/assets/images/icon-4.png) no-repeat 0px 12px
-      height: 30px
-
-.coppy-right
-  font-size: 0.8125em
-  color: #979797
-  font-family: Arial, Helvetica, sans-serif
-
-  p
-    margin-left: 350px
+.clear
+  margin-top: 1420px
 
 /deep/
   .mat-raised-button
@@ -303,3 +174,8 @@ a
 
   button.mat-menu-item
     width: 200px !important
+  
+  .ngx-pagination
+    margin-left: 380px !important
+    margin-top: 10px 
+    padding-top: 18px 

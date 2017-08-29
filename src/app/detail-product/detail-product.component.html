@@ -1,0 +1,183 @@
+<!--Header-->
+<header-fragment></header-fragment>
+<!--End Header-->
+
+<md-card style="position: absolute;right: 255px;width: 887px;left: 150px;margin-top: -5px;padding-top: 10px;">
+    <md-card class="product-header">
+        <a href="#" md-tooltip="Home">
+            Home
+        </a>
+        >>
+        <a href="#" md-tooltip="Electronic Catelogy">
+            Electronics
+        </a>
+        >> Loren Ipsum
+    </md-card>
+
+    <div class="content-left">
+        <div class="product-image">
+            <img src="assets/images/preview-img3.jpg" alt="">
+        </div>
+        <div class="product-detail">
+            <h2>
+                Lorem Ipsum is simply dummy text 
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                sed do eiusmod tempor incididunt ut labore. 
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                sed do eiusmod tempor incididunt ut labore.
+            </p>
+            <div class="price">
+                <p>
+                    Price: 
+                    <span>$698.03</span>
+                </p>
+            </div>
+            <hr>
+            <div class="available">
+                <strong>Available Options :</strong>
+                <div class="wrapper-options">
+                    <md-select placeholder="Color">
+                        <md-option *ngFor="let color of colors" [value]="color.value">
+                            {{ color.viewValue }}
+                        </md-option>
+                    </md-select>
+                    <md-select placeholder="Size" class="size-option">
+                        <md-option *ngFor="let size of sizes" [value]="size.value">
+                            {{ size.viewValue }}
+                        </md-option>
+                    </md-select>
+                    <md-select placeholder="Quantity" class="quantity-option">
+                        <md-option *ngFor="let n of quantity" [value]="n.value">
+                            {{ n.viewValue }}
+                        </md-option>
+                    </md-select>
+                </div>
+            </div>
+            
+            <div class="share">
+                <strong>Share Product :</strong>
+                <div class="icon-group">
+                    <a href="#">
+                        <img src="assets/images/youtube.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="assets/images/facebook.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="assets/images/twitter.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="assets/images/linkedin.png" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="rating">
+                <strong>Rating :</strong>
+                <p>
+                    <rating [(ngModel)]="currentRate" 
+                            [max]="maxRateValue" 
+                            [readonly]="isRatingReadonly"
+                            (onHover)="overStarDoSomething($event)" 
+                            (onLeave)="resetRatingStar($event)"></rating>
+                    <span class="label"
+                          [ngClass]="{'label-warning': ratingPercent<30, 
+                                    'label-info': ratingPercent>=30 
+                              && ratingPercent<70, 'label-success': ratingPercent>=70}"
+                          [ngStyle]="{display: (overStar && !isRatingReadonly) ? 'inline' : 'none'}">
+                          {{ratingPercent}}%
+                    </span>
+                    
+                </p>
+            </div>
+
+            <div class="button">
+                <button md-button class="add-to-cart">Add to cart</button>
+            </div>
+        </div>
+
+        <div class="specification-product">
+            <md-card class="header">
+                <h2>
+                    Product Detail
+                </h2>
+            </md-card>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                It has survived not only five centuries, but also the leap into electronic typesetting, 
+                remaining essentially unchanged.
+                <br><br>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                It has survived not only five centuries, but also the leap into electronic typesetting, 
+                remaining essentially unchanged.
+            </p>
+        </div>
+
+        <div class="tag">
+            <md-card class="header">
+                <h2>
+                    Product Tags
+                </h2>
+            </md-card>
+            
+            <md-input-container style="width: 90%;">
+                <input mdInput>
+                <md-placeholder>
+                    <md-icon>local_offer</md-icon>
+                    Add your tags
+                </md-placeholder>
+            </md-input-container>
+            <button md-button >Add tags</button>
+        </div>
+    </div>
+
+    <div class="content-right">
+        <h2>Categories</h2>
+        <md-list class="list">
+            <md-list-item class="list-item" *ngFor="let category of categories">
+                <span>
+                    <a href="#">
+                        <img src="assets/images/drop_arrow.png" alt="">
+                        {{ category.viewValue }}
+                    </a>
+                </span>
+            </md-list-item>
+        </md-list>
+        <div class="subscribe"> 
+            <h2>Newsletters Signup</h2>
+            <p>
+                Lorem ipsum dolor sit amet, 
+                consectetur adipisicing elit, sed do eiusmod.......
+            </p>
+            <md-input-container class="input">
+                <input mdInput placeholder="Your feedbacks: ">
+            </md-input-container>
+            <button md-button>Send</button>
+        </div>
+        <div class="servey">
+            <h2>Community POLL</h2>
+            <p>
+                What is the main reason for you to purchase products online?
+            </p>
+            <md-radio-group class="radio-group">
+                <md-radio-button class="radio-button" *ngFor="let reason of reasons" [value]="reason">
+                        {{ reason }}
+                </md-radio-button>
+            </md-radio-group>
+        </div>
+    </div>
+</md-card>
+
+<div class="clear">
+
+</div>
+
+<!--Footer-->
+<footer-fragment></footer-fragment>
+<!--End Footer-->

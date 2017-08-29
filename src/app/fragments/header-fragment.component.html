@@ -1,0 +1,108 @@
+<md-card style="right: 255px;width: 887px;left: 30px;padding-bottom: 10px">
+    <a routerLink="/welcome" class="logo">
+        <img src="assets/images/logo.png" alt="">
+    </a>
+    <div class="header-right">
+        <md-input-container>
+            <input mdInput placeholder="Search for Products">
+        </md-input-container>
+        <button md-raised-button color="primary">Search</button>
+        <button md-raised-button>
+            <img src="assets/images/header_cart.png" alt="">
+        </button>
+        <md-select>
+            <md-option></md-option>
+            <md-option></md-option>
+            <md-option></md-option>
+        </md-select>
+        <md-select [(ngModel)]="selectOption">
+            <md-option value="EN" class="option-lang">
+                <span>  
+                    <img src="assets/images/gb.png" alt="" style="padding-top:7px;">
+                </span>
+                <a href="#" style="text-decoration : none;">
+                    <span class="span-lang">ENG</span>
+                </a>
+            </md-option>
+            <md-option value="VN" class="option-lang">
+                <span>  
+                    <img src="assets/images/gb.png" alt="" style="padding-top:7px;">
+                </span>
+                <a href="#" style="text-decoration : none;">
+                    <span class="span-lang">VN</span>
+                </a>
+            </md-option>
+        </md-select>
+        <button md-raised-button md-tooltip="Login">
+            <img src="assets/images/login.png" alt="">
+        </button>
+    </div>
+
+    <!--Menu-->
+    <div class="menu">
+            
+        <button md-button class="menu-button">Home</button>
+            
+        <button md-button [mdMenuTriggerFor]="productMenu" class="menu-button">
+            Products
+            <img src="assets/images/down-arrow.png" alt="">
+        </button>
+        <md-menu #productMenu  yPosition="below">
+            <button md-menu-item [mdMenuTriggerFor]="subProductMenu1" >
+                <img src="assets/images/drop_arrow-hover.png" alt="">
+                Product1
+            </button>
+            <md-menu #subProductMenu1="mdMenu">
+                <button md-menu-item>
+                    <img src="assets/images/drop_arrow-hover.png" alt="">
+                    SubProduct1
+                </button>
+                <button md-menu-item>
+                    <img src="assets/images/drop_arrow-hover.png" alt="">
+                    SubProduct2
+                </button>
+            </md-menu>
+            <button md-menu-item>
+                <img src="assets/images/drop_arrow-hover.png" alt="">
+                Product2
+            </button>
+        </md-menu>
+
+        <button md-button [mdMenuTriggerFor]="brandMenu" class="menu-button">
+            Top brands
+            <img src="assets/images/down-arrow.png" alt="">    
+        </button>
+        <md-menu #brandMenu="mdMenu">
+            <button md-menu-item>
+                <img src="assets/images/drop_arrow-hover.png" alt="">
+                Brand1</button>
+            <button md-menu-item>
+                <img src="assets/images/drop_arrow-hover.png" alt="">
+                Brand2
+            </button>
+        </md-menu>
+
+        <button md-button [mdMenuTriggerFor]="serviceMenu" class="menu-button">
+            Services
+            <img src="assets/images/down-arrow.png" alt="">
+        </button>
+        <md-menu #serviceMenu="mdMenu">
+            <button md-menu-item>
+                <img src="assets/images/drop_arrow-hover.png" alt="">
+                Service1
+            </button>
+            <button md-menu-item>
+                <img src="assets/images/drop_arrow-hover.png" alt="">
+                Service2
+            </button>
+        </md-menu>
+
+        <button md-button class="menu-button">FAQS</button>
+
+        <button md-button class="menu-button">About</button>
+            
+        <button md-button class="menu-button">Contact</button>
+    </div>
+    <!--End Menu-->
+</md-card>
+    

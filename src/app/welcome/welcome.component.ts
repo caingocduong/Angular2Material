@@ -1,5 +1,4 @@
-import {MdMenuTrigger} from '@angular2-material/menu';
-import { Component, ViewChild } from '@angular/core';
+import { Component} from '@angular/core';
 import { Http } from '@angular/http';
 
 @Component({
@@ -9,8 +8,8 @@ import { Http } from '@angular/http';
 })
 
 export class WelcomeComponent {
-    @ViewChild(MdMenuTrigger) trigger : MdMenuTrigger;
-    public selectOption;
+    public currentPageFeatureProduct : number = 1;
+    public currentPageNewProduct : number = 1;
     public sortBy = [
         { value : 'lowest', viewValue : 'Lowest Price' },
         { value : 'highest', viewValue : 'Highest Price' },
@@ -22,7 +21,6 @@ export class WelcomeComponent {
     public new_products : Array<any>;
 
     constructor(private http: Http){
-        this.selectOption = "EN";
 
         this.http.get('assets/feature-products-data.json')
                 .map(response => response.json().feature_product_list)
@@ -31,9 +29,5 @@ export class WelcomeComponent {
         this.http.get('assets/new-products-data.json')
                 .map(response => response.json().new_product_list)
                 .subscribe(res => this.new_products = res);
-    }
-
-    openMenu(){
-        this.trigger.openMenu();
     }
 }
